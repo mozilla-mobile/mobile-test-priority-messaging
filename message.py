@@ -4,7 +4,15 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 
 
+import importlib
+
 from lib.api.google.language import analyze_entities, analyze_sentiment
+
+keywords_module = importlib.import_module('mobile-slack-app.config.keywords')
+members_module = importlib.import_module('mobile-slack-app.config.members')
+
+allowed_members = members_module.load_allowed_members()
+allowed_keywords = keywords_module.load_keywords()
 
 
 def process_message(message) -> dict:
@@ -89,15 +97,27 @@ def process_and_filter_message(message, keywords):
         return None
 
 
-def contains_username(message, allowed_usernames) -> bool:
+def check_member(message) -> bool:
     """
-    Check if a message is from an allowed username.
+    Check if a message is from an allowed member.
 
     Parameters:
         message (dict): The message to check.
-        allowed_usernames (list): A list of allowed usernames.
 
     Returns:
-        bool: True if the message is from an allowed username, False otherwise.
+        bool: True if the message is from an allowed member, False otherwise.
     """
-    return message['user'] in allowed_usernames
+    return message['user'] in allowed_members
+
+
+def check_keyword(message) -> bool:
+    """
+    Check if a message contains any of the allowed keywords.
+
+    Parameters:
+        message (dict): The message to check.
+
+    Returns:
+        bool: True if the message contains any of the allowed keywords, False otherwise.
+    """
+    return contains_keywords(message['text'], allowed_keywords)
