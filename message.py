@@ -50,16 +50,16 @@ def process_score(score) -> str:
 
 def contains_keywords(text, keywords) -> bool:
     """
-    Check if a text contains any of the specified keywords.
+    Check if a text contains any of the specified keywords (keys).
 
     Parameters:
         text (str): The text to check.
-        keywords (list): A list of keywords to search for.
+        keywords (dictionary): A dictionary of keywords to search for.
 
     Returns:
         bool: True if the text contains any of the keywords, False otherwise.
     """
-    return any(keyword.lower() in text.lower() for keyword in keywords)
+    return any(keyword.lower() in text.lower() for keyword in keywords.keys())
 
 
 def filter_message_by_keyword(message, keywords) -> dict:

@@ -13,16 +13,14 @@ def load_keywords():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     keywords_file = os.path.join(script_dir, "keywords.json")
 
-    """Load the allowed members from the JSON file."""
+    """Load the keywords from the JSON file."""
     try:
         with open(keywords_file, "r") as file:
             config = json.load(file)
-        return set(config["keywords"])
+        return config
     except FileNotFoundError:
-        return set()
+        return []
     except json.JSONDecodeError:
-        return set()
-    except KeyError:
-        return set()
+        return []
     except Exception:
-        return set()
+        return []

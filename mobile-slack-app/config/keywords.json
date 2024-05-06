@@ -1,3 +1,14 @@
 {
-    "keywords": ["ui-test-arm", "ui-test-apk-fenix", "ui-test-apk-focus", "robo-arm", "mobiletest", "firebase", "test lab"]
+    "firebase": {
+        "action": "SlackSRE",
+        "template": "firebase.json"
+    },
+    "bitrise": {
+        "action": "SlackSRE",
+        "template": "bitrise.json"
+    },
+    "github": {
+        "action": "SlackSRE",
+        "template": "github.json"
+    }
 }
