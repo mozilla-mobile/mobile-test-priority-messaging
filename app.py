@@ -13,7 +13,8 @@ from slack_bolt.adapter.socket_mode import SocketModeHandler
 from slack_bolt.middleware import IgnoringSelfEvents
 
 from lib.api.google.language import analyze_entities, analyze_sentiment
-from message import check_keyword, check_member, process_message, process_score
+from message import (check_keyword, check_member, process_message,
+                     process_message_for_keyword, process_score)
 from utils import get_slack_app_token, get_slack_bot_token
 
 
@@ -36,23 +37,22 @@ def setup_message_listeners(app):
     @app.message()
     def message(message, say):
 
-        if check_member(message) is True:
-            processed_message = process_message(message)
-            logging.debug(f"Sentinment Score: {processed_message['score']}")
-            logging.debug(f"Entities: {processed_message['entities']}")
+        processed_message = process_message(message)
+        logging.debug(f"Sentinment Score: {processed_message['score']}")
+        logging.debug(f"Entities: {processed_message['entities']}")
 
-            say(f"{process_score(processed_message['score'])}")
+        say(f"{process_score(processed_message['score'])}")
 
-            score, magnitude = analyze_sentiment(message["text"])
-            entities = analyze_entities(message["text"])
+        score, magnitude = analyze_sentiment(message["text"])
+        entities = analyze_entities(message["text"])
 
-            logging.debug(f"Sentiment Score: {score}, Magnitude: {magnitude}")
-            logging.debug(f"Entities: {entities}")
-            logging.debug(f"User: {message['user']}")
-            logging.debug(f"Member: {check_member(message)}")
-            logging.debug(f"Keywords: {check_keyword(message)}")
-        else:
-            pass
+        logging.debug(f"Sentiment Score: {score}, Magnitude: {magnitude}")
+        logging.debug(f"Entities: {entities}")
+        logging.debug(f"User: {message['user']}")
+        logging.debug(f"Member: {check_member(message)}")
+        logging.debug(f"Keywords: {check_keyword(message)}")
+
+        say(blocks=process_message_for_keyword(message))
 
     @app.message(re.compile("Help", re.IGNORECASE))
     def message_help(message, say):
