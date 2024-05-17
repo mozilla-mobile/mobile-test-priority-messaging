@@ -42,3 +42,13 @@ def get_google_cloud_service_account():
 def get_google_sheet_id():
     """Retrieve the Google Sheet ID from environment variables."""
     return os.environ.get("GOOGLE_SHEET_ID")
+
+
+def get_openai_project_service_account():
+    """Retrieve the OpenAI API key from environment variables."""
+    return os.environ.get("OPENAI_API_KEY")
+
+
+def get_openai_project_id():
+    """Retrieve the OpenAI project ID from environment variables."""
+    return os.environ.get("OPENAI_PROJECT_ID")
