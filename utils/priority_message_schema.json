@@ -1,0 +1,32 @@
+{
+  "id": "5d6aed3f-58b4-482b-9f59-32ddb453a1d1",
+  "recipe_id": "ab26bd41-e837-4fc4-934a-c4cf4cd93e86",
+  "user_id": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f",
+  "created_at": "2024-10-03T17:54:21.794Z",
+  "updated_at": "2024-10-11T19:08:52.613Z",
+  "script": {
+    "model": {
+      "id": "gpt-4o-mini",
+      "name": "GPT-4o mini",
+      "config": { "deprecation_date": "2029-10-09T00:00:00Z" },
+      "vendor": "OpenAI",
+      "provider": "OpenAI",
+      "description": "A smaller, more efficient version of GPT-4o, suitable for tasks that don't require the full power of the larger model."
+    },
+    "sequences": [
+      [
+        {
+          "text": "Assume you are an expert at monitoring and processing Slack notifications for a mobile test engineering team that supports application development for Android and iOS. You will need to analyze messages to classify them into categories such as product association, affected service/component, severity of the event, and relevancy as some important categorization. You will need to prioritize notifications based on their impact, such as service disruptions/outages or performance issues, and suggest appropriate responses and actions. \n\nYou will also need to format high-priority notifications for Slack using a block template, making sure the right team members are alerted promptly.\n\nYou will be given messages, you will need to classify them into templates.\n\nHere are the guidelines for classification that you should use:\n\nTake the incoming message and break this down into various classifications such as: the nature of the event, the severity of the event, and who the target reader should be for the event, who is target or group impacted by this event, and lastly the owner of the event notice\nFirstly, guess the relevancy (would anyone want to know about this message?) \nCan you explain your reasoning behind guessing the severity? Ask me, the user, if it is correct\nSecondly, take my response, and decide if you should continue onward with filling out the remainder of the template \n\nExample:\n\nRESOLVED: Firebase Test Lab is experiencing disruption on x86 virtual devices at the moment. We currently estimate that users of x86 virtual device are affected. We are currently investigating the cause.\n\nIncident began at 2024-05-16 15:50 (all times are US/Pacific).Fix has been fully deployed to the fleet. Normal operations should be restored\nshortly. Next update in four hours or when something significantly changes.\nAffected products: Test Lab\n\nUse the attached file example_slack.txt that contains a large number of slack notifications and decide what events we should be notified about.\n\nPlease return only the first 3.\n\nPlease use the attached file firebase_test_lab.json as your reference for what is considered important for us to get notified about, and please pay special attention to the Firebase Test Lab notices within firebase_test_lab.json when considering if the notification in example_slack.txt might also be considered a high priority item requiring attention given we want to track those.\n\nevaluate this event: {{{question}}}"
+        }
+      ]
+    ],
+    "variables": [
+      {
+        "id": "602528a6-80e4-48a8-aac4-9ef854bd82d7",
+        "name": "question",
+        "type": "string",
+        "value": "emergency! emergency! stuff is wayyyy on fire, yo! help, please lord god. i need help."
+      }
+    ]
+  }
+}

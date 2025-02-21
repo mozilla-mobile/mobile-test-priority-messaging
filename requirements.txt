@@ -31,3 +31,4 @@ slack_sdk==3.27.1
 tzdata==2024.1
 uritemplate==4.1.1
 urllib3==2.2.1
+schedule

@@ -1,0 +1,45 @@
+High Priority Examples:
+
+Example 1: Message: "@Jackie Last reminder that tomorrow by EOD alerts being actively used by folks will be moved and anyone not actively prototyping messages will be removed from the channel." Classification: High Priority
+
+Example 2: Message: "firefox-android ❌ ui-test-apk-fenix-legacy-arm Task: Taskcluster Owner: rvandermeulen@mozilla.com Bug 1923420 - Add adddel directive for fetching ETP list via Remote Settings." Classification: High Priority
+
+Example 3: Message: "firefox-android ❌ ui-test-apk-fenix-experimental-arm-debug Task: Taskcluster Owner: ffxbld@noreply.mozilla.org no bug - Bumping Mobile l10n changesets." Classification: High Priority
+
+Example 4: Message: "firefox-android ❌ test-apk-fenix-debug Task: Taskcluster Owner: rvandermeulen@mozilla.com Bug 1923500 - Sending CHIPS cookies in non-default cookieBehaviors." Classification: High Priority
+
+Example 5: Message: "firefox-android ❌ ui-test-apk-fenix-arm-debug Task: Taskcluster Owner: dsmith@mozilla.com Bug 1920381 - Added missing sanity checks before inserting ranges into cache." Classification: High Priority
+
+Example 6: Message: "firefox-android ❌ ui-test-apk-fenix-arm-debug Task: Taskcluster Owner: dsmith@mozilla.com Bug 1921564 - Newtab fixing load spocs to properly check startup cache." Classification: High Priority
+
+Example 7: Message: "ANNOUNCEMENT: @Jackie In an effort to clean up our communication and reporting channels, we are moving actively used notifications." Classification: High Priority
+
+Example 8: Message: "UPDATE: FirebaseDynamicLinks console allowlist URL pattern update is broken Incident began at 2024-10-08 19:00 and ended at 2024-10-09 15:00." Classification: High Priority
+
+Example 9: Message: "firefox-android ❌ ui-test-apk-fenix-arm-debug Task: Taskcluster Owner: dsmith@mozilla.com Source: Commit :hg: Bug 1921564" Classification: High Priority
+
+Medium Priority Examples:
+
+Example 1: Message: "firefox-android ❌ ui-test-apk-fenix-arm Task: Taskcluster Owner: dsmith@mozilla.com Bug 1921564 - Newtab fixing load spocs to properly check startup cache." Classification: Medium Priority
+
+Example 2: Message: "firefox-android ❌ ui-test-apk-fenix-arm-debug Task: Taskcluster Owner: ffxbld@noreply.mozilla.org no bug - Bumping Mobile l10n changesets r=release a=l10n-bump" Classification: Medium Priority
+
+Example 3: Message: "FirebaseDynamicLinks console allowlist URL pattern update was temporarily broken, but no major impact was reported. The incident has been resolved." Classification: Medium Priority
+
+Example 4: Message: "firefox-android ❌ ui-test-apk-fenix-experimental-arm-debug Task: Taskcluster Owner: rvandermeulen@mozilla.com Bug 1923500 - Fixing cookie behavior." Classification: Medium Priority
+
+Example 5: Message: "firefox-android ❌ ui-test-apk-fenix-legacy-arm Task: Taskcluster Owner: rvandermeulen@mozilla.com Source: Commit :hg: Bug 1923420" Classification: Medium Priority
+
+Low Priority Examples:
+
+Example 1: Message: "TestRail API tests passed! 🎉 Workflow: testrail-api-tests Job: test Status: success Test results: Passed Link to results: View results" Classification: Low Priority
+
+Example 2: Message: "GitHub Action ✅ remote settings fetch Status: ✅ Logs: Build Logs" Classification: Low Priority
+
+Example 3: Message: "GitHub Action ✅ credential provider playwrite tests Status: ✅ Logs: Build Logs" Classification: Low Priority
+
+Example 4: Message: "Looker Github Action ✅ - Weekly Graphs Update Status: ✅ Logs: Build Logs" Classification: Low Priority
+
+Example 5: Message: "GitHub Action ✅ credential provider script Status: ✅ Logs: Build Logs" Classification: Low Priority
+
+Example 6: Message: "Our meeting has been postponed to tomorrow." Classification: Low Priority

@@ -1,0 +1,92 @@
+{
+  "highPriorityExamples": [
+    {
+      "message": "Firebase Status Dashboard Updates APP  Today at 7:49 AM UPDATE: Firebase Test Lab is experiencing a disruption in ARM emulators tests currently. Users running any android test on ARM emulators will be affected. Incident began at 2024-11-06 00:12 and ended at 2024-11-06 05:30 (all times are US/Pacific).We have identified the issue and the fix is deployed. The system is recovering. Affected products: Test Lab",
+      "classification": "medium priority"
+    },
+    {
+      "message": "@jackie last reminder that tomorrow by eod alerts being actively used by folks will be moved and anyone not actively prototyping messages will be removed from the channel",
+      "classification": "high priority"
+    },
+    {
+      "message": "firefox-android ❌ ui-test-apk-fenix-legacy-arm task: taskcluster owner: rvandermeulen@mozilla com bug 1923420 - add adddel directive for fetching etp list via remote settings",
+      "classification": "high priority"
+    },
+    {
+      "message": "firefox-android ❌ ui-test-apk-fenix-experimental-arm-debug task: taskcluster owner: ffxbld@noreply mozilla org no bug - bumping mobile l10n changesets",
+      "classification": "high priority"
+    },
+    {
+      "message": "firefox-android ❌ test-apk-fenix-debug task: taskcluster owner: rvandermeulen@mozilla com bug 1923500 - sending chips cookies in non-default cookiebehaviors",
+      "classification": "high priority"
+    },
+    {
+      "message": "firefox-android ❌ ui-test-apk-fenix-arm-debug task: taskcluster owner: dsmith@mozilla com bug 1920381 - adde",
+      "classification": "low priority"
+    },
+    {
+      "message": "firefox-android ❌ ui-test-apk-fenix-arm-debug task: taskcluster owner: dsmith@mozilla com bug 1921564 - newtab fixing load spocs to properly check startup cache",
+      "classification": "high priority"
+    },
+    {
+      "message": "announcement: @jackie in an effort to clean up our communication and reporting channels we are moving actively used notifications",
+      "classification": "high priority"
+    },
+    {
+      "message": "update: firebasedynamiclinks console allowlist url pattern update is broken incident began at 2024-10-08 19:00 and ended at 2024-10-09 15:00",
+      "classification": "high priority"
+    },
+    {
+      "message": "firefox-android ❌ ui-test-apk-fenix-arm-debug task: taskcluster owner: dsmith@mozilla com source: commit :hg: bug 1921564",
+      "classification": "high priority"
+    }
+  ],
+  "mediumPriorityExamples": [
+    {
+      "message": "firefox-android ❌ ui-test-apk-fenix-arm task: taskcluster owner: dsmith@mozilla com bug 1921564 - newtab fixing lo",
+      "classification": "medium priority"
+    },
+    {
+      "message": "firefox-android ❌ ui-test-apk-fenix-arm-debug task: taskcluster owner: ffxbld@noreply mozilla org no bug - bumping mobile l10n changesets r=release a=l10n-bump",
+      "classification": "medium priority"
+    },
+    {
+      "message": "firebasedynamiclinks console allowlist url pattern update was temporarily broken but no major impact was reported the incident has been resolved",
+      "classification": "medium priority"
+    },
+    {
+      "message": "firefox-android ❌ ui-test-apk-fenix-experimental-arm-debug task: taskcluster owner: rvandermeulen@mozilla com bug 1923500 - fixing cookie behavior",
+      "classification": "medium priority"
+    },
+    {
+      "message": "firefox-android ❌ ui-test-apk-fenix-legacy-arm task: taskcluster owner: rvandermeulen@mozilla com source: commit :hg: bug 1923420",
+      "classification": "medium priority"
+    }
+  ],
+  "lowPriorityExamples": [
+    {
+      "message": "firefox-android ❌ ui-test-apk-fenix-arm task: taskcluster owner: dsmith@mozilla com bug 1921564 - newtab fixing lo: passed link to results: view results",
+      "classification": "low priority"
+    },
+    {
+      "message": "github action ✅ remote settings fetch status: ✅ logs: build logs",
+      "classification": "low priority"
+    },
+    {
+      "message": "github action ✅ credential provider playwrite tests status: ✅ logs: build logs",
+      "classification": "low priority"
+    },
+    {
+      "message": "looker github action ✅ - weekly graphs update status: ✅ logs: build logs",
+      "classification": "low priority"
+    },
+    {
+      "message": "github action ✅ credential provider script status: ✅ logs: build logs",
+      "classification": "low priority"
+    },
+    {
+      "message": "our meeting has been postponed to tomorrow",
+      "classification": "low priority"
+    }
+  ]
+}

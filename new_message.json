@@ -1,0 +1,153 @@
+[
+  {
+    "id": "e5a97916-56fd-4bd2-a0c5-bef3d7d67cd7",
+    "chat": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "Assume you are an expert at monitoring and processing Slack notifications for a mobile test engineering team that supports application development for Android and iOS. You will need to analyze messages to classify them into a priority: \"High Priority\", \"Medium Priority\", or \"Low Priority\".\n\nUse the attached file example_classifications.json as help to augment your reasoning when evaluating the priority, but not as your only consideration for priority classification.\n\nI will be referencing a chain of instructions you are given in later prompts according the \\'STEP NUMBER\\' associated with the \\'INSTRUCTIONS\\' you will be given for that step. Your \\'RESPONSE\\' to those instructions should be associated with the STEP NUMBER your INSTRUCTIONS are contained in. Your specific instructions will be inbetween three asterisk characters (*** {instructions} ***) that you can use to easily isolate what is being asked of you.\n\nAn example instruction could look like this:\nINSTRUCTIONS: *** Jump up and down five times please and say, \"Yay, bubble gum and lollipops!\" ***\n\nYou may see conditional INSTRUCTIONS contained inside of other instructions. These will contain two asterisks ( *** INSTRUCTIONS: ** INSTRUCTIONS: {conditional instructions} ** *** ) instead of three asterisks.\n\nPlease remember this for future prompts you are given.\n\nSTEP NUMBER 1\nINSTRUCTIONS: *** Determine the priority of the following message: [TEST] is this bad? ***",
+          "context": []
+        },
+        {
+          "role": "assistant",
+          "content": "*** STEP NUMBER 1 INSTRUCTIONS: *** Determine the priority of the message: [TEST] is this bad? ***\n\nBased on the provided context and the classification examples, I would classify the given message as \"High Priority\". The message starts with \\'[TEST]\\', which indicates a test failure or a bad test result, which is typically considered high priority to investigate and resolve.",
+          "context": [
+            {
+              "content": "ification : medium priority lowpriorityexamples : message : firefox-android ❌ ui-test-apk-fenix-arm task: taskcluster owner: dsmith@mozilla com bug 1921564 - newtab fixing lo: passed link to results: view results classification : low priority message : github action ✅ remote settings fetch status: ✅ logs: build logs classification : low priority message : github action ✅ credential provider playwrite tests status: ✅ logs: build logs classification : low priority message : looker github action ✅ - weekly graphs update status: ✅ logs: build logs classification : low priority message : github action ✅ credential provider script status: ✅ logs: build logs classification : low priority message : our meeting has been postponed to tomorrow classification : low priority",
+              "name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "id": "8edd7a5a-4b4d-4b2e-a206-79e16d268cd9",
+              "file_id": "ebb9deff-92aa-49e9-aab1-69f41ef38e3b",
+              "file_name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "file_size": 4098
+            },
+            {
+              "content": "highpriorityexamples : message : @jackie last reminder that tomorrow by eod alerts being actively used by folks will be moved and anyone not actively prototyping messages will be removed from the channel classification : high priority message : firefox-android ❌ ui-test-apk-fenix-legacy-arm task: taskcluster owner: rvandermeulen@mozilla com bug 1923420 - add adddel directive for fetching etp list via remote settings classification : high priority message : firefox-android ❌ ui-test-apk-fenix-experimental-arm-debug task: taskcluster owner: ffxbld@noreply mozilla org no bug - bumping mobile l10n changesets classification : high priority message : firefox-android ❌ test-apk-fenix-debug task: taskcluster owner: rvandermeulen@mozilla com bug 1923500 - sending chips cookies in non-default cookiebehaviors classification : high priority message : firefox-android ❌ ui-tes",
+              "name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "id": "30077474-631f-4b14-92ef-20a12d53e16a",
+              "file_id": "ebb9deff-92aa-49e9-aab1-69f41ef38e3b",
+              "file_name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "file_size": 4098
+            },
+            {
+              "content": "t-apk-fenix-arm-debug task: taskcluster owner: dsmith@mozilla com bug 1920381 - adde classification : low priority message : firefox-android ❌ ui-test-apk-fenix-arm-debug task: taskcluster owner: dsmith@mozilla com bug 1921564 - newtab fixing load spocs to properly check startup cache classification : high priority message : announcement: @jackie in an effort to clean up our communication and reporting channels we are moving actively used notifications classification : high priority message : update: firebasedynamiclinks console allowlist url pattern update is broken incident began at 2024-10-08 19:00 and ended at 2024-10-09 15:00 classification : high priority message : firefox-android ❌ ui-test-apk-fenix-arm-debug task: taskcluster owner: dsmith@mozilla com source: commit :hg: bug 1921564 classification : high priority mediumpriorityexamples :",
+              "name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "id": "de09a237-0981-4a71-970a-ce1571250c08",
+              "file_id": "ebb9deff-92aa-49e9-aab1-69f41ef38e3b",
+              "file_name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "file_size": 4098
+            },
+            {
+              "content": "message : firefox-android ❌ ui-test-apk-fenix-arm task: taskcluster owner: dsmith@mozilla com bug 1921564 - newtab fixing lo classification : medium priority message : firefox-android ❌ ui-test-apk-fenix-arm-debug task: taskcluster owner: ffxbld@noreply mozilla org no bug - bumping mobile l10n changesets r=release a=l10n-bump classification : medium priority message : firebasedynamiclinks console allowlist url pattern update was temporarily broken but no major impact was reported the incident has been resolved classification : medium priority message : firefox-android ❌ ui-test-apk-fenix-experimental-arm-debug task: taskcluster owner: rvandermeulen@mozilla com bug 1923500 - fixing cookie behavior classification : medium priority message : firefox-android ❌ ui-test-apk-fenix-legacy-arm task: taskcluster owner: rvandermeulen@mozilla com source: commit :hg: bug 1923420 class",
+              "name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "id": "96503830-c47e-4dfd-b642-9a73ee376c39",
+              "file_id": "ebb9deff-92aa-49e9-aab1-69f41ef38e3b",
+              "file_name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "file_size": 4098
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": "STEP NUMBER 2\nINSTRUCTIONS: *** Only respond with the priority classification in text format ***",
+          "context": []
+        },
+        {
+          "role": "assistant",
+          "content": "High Priority",
+          "context": [
+            {
+              "content": "highpriorityexamples : message : @jackie last reminder that tomorrow by eod alerts being actively used by folks will be moved and anyone not actively prototyping messages will be removed from the channel classification : high priority message : firefox-android ❌ ui-test-apk-fenix-legacy-arm task: taskcluster owner: rvandermeulen@mozilla com bug 1923420 - add adddel directive for fetching etp list via remote settings classification : high priority message : firefox-android ❌ ui-test-apk-fenix-experimental-arm-debug task: taskcluster owner: ffxbld@noreply mozilla org no bug - bumping mobile l10n changesets classification : high priority message : firefox-android ❌ test-apk-fenix-debug task: taskcluster owner: rvandermeulen@mozilla com bug 1923500 - sending chips cookies in non-default cookiebehaviors classification : high priority message : firefox-android ❌ ui-tes",
+              "name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "id": "30077474-631f-4b14-92ef-20a12d53e16a",
+              "file_id": "ebb9deff-92aa-49e9-aab1-69f41ef38e3b",
+              "file_name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "file_size": 4098
+            },
+            {
+              "content": "ification : medium priority lowpriorityexamples : message : firefox-android ❌ ui-test-apk-fenix-arm task: taskcluster owner: dsmith@mozilla com bug 1921564 - newtab fixing lo: passed link to results: view results classification : low priority message : github action ✅ remote settings fetch status: ✅ logs: build logs classification : low priority message : github action ✅ credential provider playwrite tests status: ✅ logs: build logs classification : low priority message : looker github action ✅ - weekly graphs update status: ✅ logs: build logs classification : low priority message : github action ✅ credential provider script status: ✅ logs: build logs classification : low priority message : our meeting has been postponed to tomorrow classification : low priority",
+              "name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "id": "8edd7a5a-4b4d-4b2e-a206-79e16d268cd9",
+              "file_id": "ebb9deff-92aa-49e9-aab1-69f41ef38e3b",
+              "file_name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "file_size": 4098
+            },
+            {
+              "content": "t-apk-fenix-arm-debug task: taskcluster owner: dsmith@mozilla com bug 1920381 - adde classification : low priority message : firefox-android ❌ ui-test-apk-fenix-arm-debug task: taskcluster owner: dsmith@mozilla com bug 1921564 - newtab fixing load spocs to properly check startup cache classification : high priority message : announcement: @jackie in an effort to clean up our communication and reporting channels we are moving actively used notifications classification : high priority message : update: firebasedynamiclinks console allowlist url pattern update is broken incident began at 2024-10-08 19:00 and ended at 2024-10-09 15:00 classification : high priority message : firefox-android ❌ ui-test-apk-fenix-arm-debug task: taskcluster owner: dsmith@mozilla com source: commit :hg: bug 1921564 classification : high priority mediumpriorityexamples :",
+              "name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "id": "de09a237-0981-4a71-970a-ce1571250c08",
+              "file_id": "ebb9deff-92aa-49e9-aab1-69f41ef38e3b",
+              "file_name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "file_size": 4098
+            },
+            {
+              "content": "message : firefox-android ❌ ui-test-apk-fenix-arm task: taskcluster owner: dsmith@mozilla com bug 1921564 - newtab fixing lo classification : medium priority message : firefox-android ❌ ui-test-apk-fenix-arm-debug task: taskcluster owner: ffxbld@noreply mozilla org no bug - bumping mobile l10n changesets r=release a=l10n-bump classification : medium priority message : firebasedynamiclinks console allowlist url pattern update was temporarily broken but no major impact was reported the incident has been resolved classification : medium priority message : firefox-android ❌ ui-test-apk-fenix-experimental-arm-debug task: taskcluster owner: rvandermeulen@mozilla com bug 1923500 - fixing cookie behavior classification : medium priority message : firefox-android ❌ ui-test-apk-fenix-legacy-arm task: taskcluster owner: rvandermeulen@mozilla com source: commit :hg: bug 1923420 class",
+              "name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "id": "96503830-c47e-4dfd-b642-9a73ee376c39",
+              "file_id": "ebb9deff-92aa-49e9-aab1-69f41ef38e3b",
+              "file_name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "file_size": 4098
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": "STEP 3\nINSTRUCTIONS:\n*** If your RESPONSE from STEP 2 contains a priority of \"Low Priority\" then these are your new INSTRUCTIONS: ** INSTRUCTIONS: Disregard the rest of this prompt and reply with the output, \"Low Priority event; bypassing further processing.\" ** ***\n\nIf you have classified the Slack notification as \"Medium Priority\" or \"High Priority\", your INSTRUCTIONS: *** Classify the original message with a \"Relevancy Group\".\n\nThis \"Relevancy Group\" represents the type of events a user is subscribed to and would like to be notified about. \n\n\nUse the attached file example_classification.json as your reference to example events you will classify the \"Owner\" for and attempt to find the best \"Owner\" for each event in the file.\n\nAn \"Owner\" is someone who works on the team most closely associated with the event.\n\nExample \"Owners\" are:\n- \"I do not know\"\n- \"I really, really do not know\"\n\nRespond with who you think the example owner of the event you originally classified. ***\n",
+          "context": []
+        },
+        {
+          "role": "assistant",
+          "content": "*** STEP 3 INSTRUCTIONS: *** Classify the original message with a \"Relevancy Group\".\n\nBased on the original classification of \"High Priority\", I will classify the original message with a \"Relevancy Group\".\n\nThe original message: \"[TEST] is this bad?\" has the following information: taskcluster owner: \"dsmith@mozilla com\"\n\nBased on the \"Owners\" in the provided example_classification.json, I think the example owner of the event is: \"I do not know\"",
+          "context": [
+            {
+              "content": "ification : medium priority lowpriorityexamples : message : firefox-android ❌ ui-test-apk-fenix-arm task: taskcluster owner: dsmith@mozilla com bug 1921564 - newtab fixing lo: passed link to results: view results classification : low priority message : github action ✅ remote settings fetch status: ✅ logs: build logs classification : low priority message : github action ✅ credential provider playwrite tests status: ✅ logs: build logs classification : low priority message : looker github action ✅ - weekly graphs update status: ✅ logs: build logs classification : low priority message : github action ✅ credential provider script status: ✅ logs: build logs classification : low priority message : our meeting has been postponed to tomorrow classification : low priority",
+              "name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "id": "8edd7a5a-4b4d-4b2e-a206-79e16d268cd9",
+              "file_id": "ebb9deff-92aa-49e9-aab1-69f41ef38e3b",
+              "file_name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "file_size": 4098
+            },
+            {
+              "content": "highpriorityexamples : message : @jackie last reminder that tomorrow by eod alerts being actively used by folks will be moved and anyone not actively prototyping messages will be removed from the channel classification : high priority message : firefox-android ❌ ui-test-apk-fenix-legacy-arm task: taskcluster owner: rvandermeulen@mozilla com bug 1923420 - add adddel directive for fetching etp list via remote settings classification : high priority message : firefox-android ❌ ui-test-apk-fenix-experimental-arm-debug task: taskcluster owner: ffxbld@noreply mozilla org no bug - bumping mobile l10n changesets classification : high priority message : firefox-android ❌ test-apk-fenix-debug task: taskcluster owner: rvandermeulen@mozilla com bug 1923500 - sending chips cookies in non-default cookiebehaviors classification : high priority message : firefox-android ❌ ui-tes",
+              "name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "id": "30077474-631f-4b14-92ef-20a12d53e16a",
+              "file_id": "ebb9deff-92aa-49e9-aab1-69f41ef38e3b",
+              "file_name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "file_size": 4098
+            },
+            {
+              "content": "t-apk-fenix-arm-debug task: taskcluster owner: dsmith@mozilla com bug 1920381 - adde classification : low priority message : firefox-android ❌ ui-test-apk-fenix-arm-debug task: taskcluster owner: dsmith@mozilla com bug 1921564 - newtab fixing load spocs to properly check startup cache classification : high priority message : announcement: @jackie in an effort to clean up our communication and reporting channels we are moving actively used notifications classification : high priority message : update: firebasedynamiclinks console allowlist url pattern update is broken incident began at 2024-10-08 19:00 and ended at 2024-10-09 15:00 classification : high priority message : firefox-android ❌ ui-test-apk-fenix-arm-debug task: taskcluster owner: dsmith@mozilla com source: commit :hg: bug 1921564 classification : high priority mediumpriorityexamples :",
+              "name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "id": "de09a237-0981-4a71-970a-ce1571250c08",
+              "file_id": "ebb9deff-92aa-49e9-aab1-69f41ef38e3b",
+              "file_name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "file_size": 4098
+            },
+            {
+              "content": "message : firefox-android ❌ ui-test-apk-fenix-arm task: taskcluster owner: dsmith@mozilla com bug 1921564 - newtab fixing lo classification : medium priority message : firefox-android ❌ ui-test-apk-fenix-arm-debug task: taskcluster owner: ffxbld@noreply mozilla org no bug - bumping mobile l10n changesets r=release a=l10n-bump classification : medium priority message : firebasedynamiclinks console allowlist url pattern update was temporarily broken but no major impact was reported the incident has been resolved classification : medium priority message : firefox-android ❌ ui-test-apk-fenix-experimental-arm-debug task: taskcluster owner: rvandermeulen@mozilla com bug 1923500 - fixing cookie behavior classification : medium priority message : firefox-android ❌ ui-test-apk-fenix-legacy-arm task: taskcluster owner: rvandermeulen@mozilla com source: commit :hg: bug 1923420 class",
+              "name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "id": "96503830-c47e-4dfd-b642-9a73ee376c39",
+              "file_id": "ebb9deff-92aa-49e9-aab1-69f41ef38e3b",
+              "file_name": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f/example_classifications.json",
+              "file_size": 4098
+            }
+          ]
+        }
+      ],
+      "model": {
+        "provider": "Together",
+        "vendor": "Meta",
+        "id": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+        "name": "Llama 3.1 - 8B Instruct Turbo",
+        "description": "A powerful, open-source language model with 8 billion parameters, optimized for instruction following and text generation.",
+        "config": {
+          "deprecation_date": "2029-10-09T00:00:00Z"
+        }
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2965,
+      "completion_tokens": 102,
+      "total_tokens": 3067
+    }
+  }
+]

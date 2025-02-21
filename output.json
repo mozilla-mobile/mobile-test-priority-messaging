@@ -1,0 +1,38 @@
+{
+  "id": "954a2728-5be8-4706-843f-cbe3eded3307",
+  "recipe_id": "1b849022-f2f2-44ac-bc06-c8f642f64b00",
+  "user_id": "7426c661-1ed9-4ef9-869d-0e35c2a4ac0f",
+  "created_at": "2024-10-17T01:50:36.713Z",
+  "updated_at": "2024-10-17T22:23:06.822Z",
+  "script": {
+    "model": {
+      "id": "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
+      "name": "Llama 3.1 - 70B Instruct Turbo",
+      "config": { "deprecation_date": "2029-10-09T00:00:00Z" },
+      "vendor": "Meta",
+      "provider": "Together",
+      "description": "A larger, more capable open-source language model with 70 billion parameters, designed for advanced tasks and complex reasoning."
+    },
+    "sequences": [
+      [
+        {
+          "text": "Assume you are an expert at monitoring and processing Slack notifications for a mobile test engineering team that supports application development for Android and iOS. You will need to analyze messages to classify them into a priority: \"High Priority\", \"Medium Priority\", or \"Low Priority\".\n\nUse the attached file example_classifications.json as help to augment your reasoning when evaluating the priority, but not as your only consideration for priority classification.\n\nI will be referencing a chain of instructions you are given in later prompts according the 'STEP NUMBER' associated with the 'INSTRUCTIONS' you will be given for that step. Your 'RESPONSE' to those instructions should be associated with the STEP NUMBER your INSTRUCTIONS are contained in. Your specific instructions will be inbetween three asterisk characters (*** {instructions} ***) that you can use to easily isolate what is being asked of you.\n\nAn example instruction could look like this:\nINSTRUCTIONS: *** Jump up and down five times please and say, \"Yay, bubble gum and lollipops!\" ***\n\nYou may see conditional INSTRUCTIONS contained inside of other instructions. These will contain two asterisks ( *** INSTRUCTIONS: ** INSTRUCTIONS: {conditional instructions} ** *** ) instead of three asterisks.\n\nPlease remember this for future prompts you are given.\n\nSTEP NUMBER 1\nINSTRUCTIONS: *** Determine the priority of the following message: {{{question}}} ***"
+        },
+        {
+          "text": "STEP NUMBER 2\nINSTRUCTIONS: *** Only respond with the priority classification in text format ***"
+        },
+        {
+          "text": "STEP 3\nINSTRUCTIONS:\n*** If your RESPONSE from STEP 2 contains a priority of \"Low Priority\" then these are your new INSTRUCTIONS: ** INSTRUCTIONS: Disregard the rest of this prompt and reply with the output, \"Low Priority event; bypassing further processing.\" ** ***\n\nIf you have classified the Slack notification as \"Medium Priority\" or \"High Priority\", your INSTRUCTIONS: *** Classify the original message with a \"Relevancy Group\".\n\nThis \"Relevancy Group\" represents the type of events a user is subscribed to and would like to be notified about. \n\n\nUse the attached file example_classification.json as your reference to example events you will classify the \"Owner\" for and attempt to find the best \"Owner\" for each event in the file.\n\nAn \"Owner\" is someone who works on the team most closely associated with the event.\n\nExample \"Owners\" are:\n- \"I do not know\"\n- \"I really, really do not know\"\n\nRespond with who you think the example owner of the event you originally classified. ***\n"
+        }
+      ]
+    ],
+    "variables": [
+      {
+        "id": "23c0c57f-2c1a-483b-b94f-0638b5221853",
+        "name": "question",
+        "type": "string",
+        "value": "formulaic rate limiting is experience something of an issue. we'll let you know what it is if it is or something, possibly? but who knows? not me."
+      }
+    ]
+  }
+}
